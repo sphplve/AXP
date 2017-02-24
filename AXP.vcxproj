@@ -1,0 +1,378 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="12.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{EC5D0426-85AD-45CA-815F-6378D5CD546D}</ProjectGuid>
+    <Keyword>Win32Proj</Keyword>
+    <RootNamespace>AXP</RootNamespace>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v120</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v120</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup />
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_LIB;PLATFORM_WIN32;COMPILER_MSVC;ARCH_X86;ARCH_LITTLE_ENDIAN;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <SDLCheck>true</SDLCheck>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <SDLCheck>true</SDLCheck>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <Text Include="ReadMe.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="AXP\cplusplus\libc\include\Common\BaseWorker.h" />
+    <ClInclude Include="AXP\cplusplus\libc\include\Common\ClassLoader.h" />
+    <ClInclude Include="AXP\cplusplus\libc\include\Common\Tracker.h" />
+    <ClInclude Include="AXP\cplusplus\libc\include\MessageQueue\Bundle.h" />
+    <ClInclude Include="AXP\cplusplus\libc\include\MessageQueue\Handler.h" />
+    <ClInclude Include="AXP\cplusplus\libc\include\MessageQueue\Looper.h" />
+    <ClInclude Include="AXP\cplusplus\libc\include\MessageQueue\Message.h" />
+    <ClInclude Include="AXP\cplusplus\libc\include\MessageQueue\MessageQueue.h" />
+    <ClInclude Include="AXP\cplusplus\libc\include\Network\HttpServer.h" />
+    <ClInclude Include="AXP\cplusplus\ThirdParty\IConv\Libiconv\aliases.h" />
+    <ClInclude Include="AXP\cplusplus\ThirdParty\IConv\Libiconv\aliases2.h" />
+    <ClInclude Include="AXP\cplusplus\ThirdParty\IConv\Libiconv\aliases_aix.h" />
+    <ClInclude Include="AXP\cplusplus\ThirdParty\IConv\Libiconv\aliases_aix_sysaix.h" />
+    <ClInclude Include="AXP\cplusplus\ThirdParty\IConv\Libiconv\aliases_dos.h" />
+    <ClInclude Include="AXP\cplusplus\ThirdParty\IConv\Libiconv\aliases_extra.h" />
+    <ClInclude Include="AXP\cplusplus\ThirdParty\IConv\Libiconv\aliases_osf1.h" />
+    <ClInclude Include="AXP\cplusplus\ThirdParty\IConv\Libiconv\aliases_osf1_sysosf1.h" />
+    <ClInclude Include="AXP\cplusplus\ThirdParty\IConv\Libiconv\aliases_sysaix.h" />
+    <ClInclude Include="AXP\cplusplus\ThirdParty\IConv\Libiconv\aliases_syshpux.h" />
+    <ClInclude Include="AXP\cplusplus\ThirdParty\IConv\Libiconv\aliases_sysosf1.h" />
+    <ClInclude Include="AXP\cplusplus\ThirdParty\IConv\Libiconv\aliases_syssolaris.h" />
+    <ClInclude Include="AXP\cplusplus\ThirdParty\IConv\Libiconv\armscii_8.h" />
+    <ClInclude Include="AXP\cplusplus\ThirdParty\IConv\Libiconv\ascii.h" />
+    <ClInclude Include="AXP\cplusplus\ThirdParty\IConv\Libiconv\atarist.h" />
+    <ClInclude Include="AXP\cplusplus\ThirdParty\IConv\Libiconv\big5.h" />
+    <ClInclude Include="AXP\cplusplus\ThirdParty\IConv\Libiconv\big5hkscs1999.h" />
+    <ClInclude Include="AXP\cplusplus\ThirdParty\IConv\Libiconv\big5hkscs2001.h" />
+    <ClInclude Include="AXP\cplusplus\ThirdParty\IConv\Libiconv\big5hkscs2004.h" />
+    <ClInclude Include="AXP\cplusplus\ThirdParty\IConv\Libiconv\big5hkscs2008.h" />
+    <ClInclude Include="AXP\cplusplus\ThirdParty\IConv\Libiconv\big5_2003.h" />
+    <ClInclude Include="AXP\cplusplus\ThirdParty\IConv\Libiconv\c99.h" />
+    <ClInclude Include="AXP\cplusplus\ThirdParty\IConv\Libiconv\canonical.h" />
+    <ClInclude Include="AXP\cplusplus\ThirdParty\IConv\Libiconv\canonical_aix.h" />
+    <ClInclude Include="AXP\cplusplus\ThirdParty\IConv\Libiconv\canonical_aix_sysaix.h" />
+    <ClInclude Include="AXP\cplusplus\ThirdParty\IConv\Libiconv\canonical_dos.h" />
+    <ClInclude Include="AXP\cplusplus\ThirdParty\IConv\Libiconv\canonical_extra.h" />
+    <ClInclude Include="AXP\cplusplus\ThirdParty\IConv\Libiconv\canonical_local.h" />
+    <ClInclude Include="AXP\cplusplus\ThirdParty\IConv\Libiconv\canonical_local_sysaix.h" />
+    <ClInclude Include="AXP\cplusplus\ThirdParty\IConv\Libiconv\canonical_local_syshpux.h" />
+    <ClInclude Include="AXP\cplusplus\ThirdParty\IConv\Libiconv\canonical_local_sysosf1.h" />
+    <ClInclude Include="AXP\cplusplus\ThirdParty\IConv\Libiconv\canonical_local_syssolaris.h" />
+    <ClInclude Include="AXP\cplusplus\ThirdParty\IConv\Libiconv\canonical_osf1.h" />
+    <ClInclude Include="AXP\cplusplus\ThirdParty\IConv\Libiconv\canonical_osf1_sysosf1.h" />
+    <ClInclude Include="AXP\cplusplus\ThirdParty\IConv\Libiconv\canonical_sysaix.h" />
+    <ClInclude Include="AXP\cplusplus\ThirdParty\IConv\Libiconv\canonical_syshpux.h" />
+    <ClInclude Include="AXP\cplusplus\ThirdParty\IConv\Libiconv\canonical_sysosf1.h" />
+    <ClInclude Include="AXP\cplusplus\ThirdParty\IConv\Libiconv\canonical_syssolaris.h" />
+    <ClInclude Include="AXP\cplusplus\ThirdParty\IConv\Libiconv\ces_big5.h" />
+    <ClInclude Include="AXP\cplusplus\ThirdParty\IConv\Libiconv\ces_gbk.h" />
+    <ClInclude Include="AXP\cplusplus\ThirdParty\IConv\Libiconv\cjk_variants.h" />
+    <ClInclude Include="AXP\cplusplus\ThirdParty\IConv\Libiconv\cns11643.h" />
+    <ClInclude Include="AXP\cplusplus\ThirdParty\IConv\Libiconv\cns11643_1.h" />
+    <ClInclude Include="AXP\cplusplus\ThirdParty\IConv\Libiconv\cns11643_15.h" />
+    <ClInclude Include="AXP\cplusplus\ThirdParty\IConv\Libiconv\cns11643_2.h" />
+    <ClInclude Include="AXP\cplusplus\ThirdParty\IConv\Libiconv\cns11643_3.h" />
+    <ClInclude Include="AXP\cplusplus\ThirdParty\IConv\Libiconv\cns11643_4.h" />
+    <ClInclude Include="AXP\cplusplus\ThirdParty\IConv\Libiconv\cns11643_4a.h" />
+    <ClInclude Include="AXP\cplusplus\ThirdParty\IConv\Libiconv\cns11643_4b.h" />
+    <ClInclude Include="AXP\cplusplus\ThirdParty\IConv\Libiconv\cns11643_5.h" />
+    <ClInclude Include="AXP\cplusplus\ThirdParty\IConv\Libiconv\cns11643_6.h" />
+    <ClInclude Include="AXP\cplusplus\ThirdParty\IConv\Libiconv\cns11643_7.h" />
+    <ClInclude Include="AXP\cplusplus\ThirdParty\IConv\Libiconv\cns11643_inv.h" />
+    <ClInclude Include="AXP\cplusplus\ThirdParty\IConv\Libiconv\Config.h" />
+    <ClInclude Include="AXP\cplusplus\ThirdParty\IConv\Libiconv\converters.h" />
+    <ClInclude Include="AXP\cplusplus\ThirdParty\IConv\Libiconv\cp1046.h" />
+    <ClInclude Include="AXP\cplusplus\ThirdParty\IConv\Libiconv\cp1124.h" />
+    <ClInclude Include="AXP\cplusplus\ThirdParty\IConv\Libiconv\cp1125.h" />
+    <ClInclude Include="AXP\cplusplus\ThirdParty\IConv\Libiconv\cp1129.h" />
+    <ClInclude Include="AXP\cplusplus\ThirdParty\IConv\Libiconv\cp1131.h" />
+    <ClInclude Include="AXP\cplusplus\ThirdParty\IConv\Libiconv\cp1133.h" />
+    <ClInclude Include="AXP\cplusplus\ThirdParty\IConv\Libiconv\cp1161.h" />
+    <ClInclude Include="AXP\cplusplus\ThirdParty\IConv\Libiconv\cp1162.h" />
+    <ClInclude Include="AXP\cplusplus\ThirdParty\IConv\Libiconv\cp1163.h" />
+    <ClInclude Include="AXP\cplusplus\ThirdParty\IConv\Libiconv\cp1250.h" />
+    <ClInclude Include="AXP\cplusplus\ThirdParty\IConv\Libiconv\cp1251.h" />
+    <ClInclude Include="AXP\cplusplus\ThirdParty\IConv\Libiconv\cp1252.h" />
+    <ClInclude Include="AXP\cplusplus\ThirdParty\IConv\Libiconv\cp1253.h" />
+    <ClInclude Include="AXP\cplusplus\ThirdParty\IConv\Libiconv\cp1254.h" />
+    <ClInclude Include="AXP\cplusplus\ThirdParty\IConv\Libiconv\cp1255.h" />
+    <ClInclude Include="AXP\cplusplus\ThirdParty\IConv\Libiconv\cp1256.h" />
+    <ClInclude Include="AXP\cplusplus\ThirdParty\IConv\Libiconv\cp1257.h" />
+    <ClInclude Include="AXP\cplusplus\ThirdParty\IConv\Libiconv\cp1258.h" />
+    <ClInclude Include="AXP\cplusplus\ThirdParty\IConv\Libiconv\cp437.h" />
+    <ClInclude Include="AXP\cplusplus\ThirdParty\IConv\Libiconv\cp737.h" />
+    <ClInclude Include="AXP\cplusplus\ThirdParty\IConv\Libiconv\cp775.h" />
+    <ClInclude Include="AXP\cplusplus\ThirdParty\IConv\Libiconv\cp850.h" />
+    <ClInclude Include="AXP\cplusplus\ThirdParty\IConv\Libiconv\cp852.h" />
+    <ClInclude Include="AXP\cplusplus\ThirdParty\IConv\Libiconv\cp853.h" />
+    <ClInclude Include="AXP\cplusplus\ThirdParty\IConv\Libiconv\cp855.h" />
+    <ClInclude Include="AXP\cplusplus\ThirdParty\IConv\Libiconv\cp856.h" />
+    <ClInclude Include="AXP\cplusplus\ThirdParty\IConv\Libiconv\cp857.h" />
+    <ClInclude Include="AXP\cplusplus\ThirdParty\IConv\Libiconv\cp858.h" />
+    <ClInclude Include="AXP\cplusplus\ThirdParty\IConv\Libiconv\cp860.h" />
+    <ClInclude Include="AXP\cplusplus\ThirdParty\IConv\Libiconv\cp861.h" />
+    <ClInclude Include="AXP\cplusplus\ThirdParty\IConv\Libiconv\cp862.h" />
+    <ClInclude Include="AXP\cplusplus\ThirdParty\IConv\Libiconv\cp863.h" />
+    <ClInclude Include="AXP\cplusplus\ThirdParty\IConv\Libiconv\cp864.h" />
+    <ClInclude Include="AXP\cplusplus\ThirdParty\IConv\Libiconv\cp865.h" />
+    <ClInclude Include="AXP\cplusplus\ThirdParty\IConv\Libiconv\cp866.h" />
+    <ClInclude Include="AXP\cplusplus\ThirdParty\IConv\Libiconv\cp869.h" />
+    <ClInclude Include="AXP\cplusplus\ThirdParty\IConv\Libiconv\cp874.h" />
+    <ClInclude Include="AXP\cplusplus\ThirdParty\IConv\Libiconv\cp922.h" />
+    <ClInclude Include="AXP\cplusplus\ThirdParty\IConv\Libiconv\cp932.h" />
+    <ClInclude Include="AXP\cplusplus\ThirdParty\IConv\Libiconv\cp932ext.h" />
+    <ClInclude Include="AXP\cplusplus\ThirdParty\IConv\Libiconv\cp936.h" />
+    <ClInclude Include="AXP\cplusplus\ThirdParty\IConv\Libiconv\cp936ext.h" />
+    <ClInclude Include="AXP\cplusplus\ThirdParty\IConv\Libiconv\cp943.h" />
+    <ClInclude Include="AXP\cplusplus\ThirdParty\IConv\Libiconv\cp949.h" />
+    <ClInclude Include="AXP\cplusplus\ThirdParty\IConv\Libiconv\cp950.h" />
+    <ClInclude Include="AXP\cplusplus\ThirdParty\IConv\Libiconv\cp950ext.h" />
+    <ClInclude Include="AXP\cplusplus\ThirdParty\IConv\Libiconv\dec_hanyu.h" />
+    <ClInclude Include="AXP\cplusplus\ThirdParty\IConv\Libiconv\dec_kanji.h" />
+    <ClInclude Include="AXP\cplusplus\ThirdParty\IConv\Libiconv\euc_cn.h" />
+    <ClInclude Include="AXP\cplusplus\ThirdParty\IConv\Libiconv\euc_jisx0213.h" />
+    <ClInclude Include="AXP\cplusplus\ThirdParty\IConv\Libiconv\euc_jp.h" />
+    <ClInclude Include="AXP\cplusplus\ThirdParty\IConv\Libiconv\euc_kr.h" />
+    <ClInclude Include="AXP\cplusplus\ThirdParty\IConv\Libiconv\euc_tw.h" />
+    <ClInclude Include="AXP\cplusplus\ThirdParty\IConv\Libiconv\flags.h" />
+    <ClInclude Include="AXP\cplusplus\ThirdParty\IConv\Libiconv\flushwc.h" />
+    <ClInclude Include="AXP\cplusplus\ThirdParty\IConv\Libiconv\gb12345.h" />
+    <ClInclude Include="AXP\cplusplus\ThirdParty\IConv\Libiconv\gb12345ext.h" />
+    <ClInclude Include="AXP\cplusplus\ThirdParty\IConv\Libiconv\gb18030.h" />
+    <ClInclude Include="AXP\cplusplus\ThirdParty\IConv\Libiconv\gb18030ext.h" />
+    <ClInclude Include="AXP\cplusplus\ThirdParty\IConv\Libiconv\gb18030uni.h" />
+    <ClInclude Include="AXP\cplusplus\ThirdParty\IConv\Libiconv\gb2312.h" />
+    <ClInclude Include="AXP\cplusplus\ThirdParty\IConv\Libiconv\gbk.h" />
+    <ClInclude Include="AXP\cplusplus\ThirdParty\IConv\Libiconv\gbkext1.h" />
+    <ClInclude Include="AXP\cplusplus\ThirdParty\IConv\Libiconv\gbkext2.h" />
+    <ClInclude Include="AXP\cplusplus\ThirdParty\IConv\Libiconv\gbkext_inv.h" />
+    <ClInclude Include="AXP\cplusplus\ThirdParty\IConv\Libiconv\georgian_academy.h" />
+    <ClInclude Include="AXP\cplusplus\ThirdParty\IConv\Libiconv\georgian_ps.h" />
+    <ClInclude Include="AXP\cplusplus\ThirdParty\IConv\Libiconv\hkscs1999.h" />
+    <ClInclude Include="AXP\cplusplus\ThirdParty\IConv\Libiconv\hkscs2001.h" />
+    <ClInclude Include="AXP\cplusplus\ThirdParty\IConv\Libiconv\hkscs2004.h" />
+    <ClInclude Include="AXP\cplusplus\ThirdParty\IConv\Libiconv\hkscs2008.h" />
+    <ClInclude Include="AXP\cplusplus\ThirdParty\IConv\Libiconv\hp_roman8.h" />
+    <ClInclude Include="AXP\cplusplus\ThirdParty\IConv\Libiconv\hz.h" />
+    <ClInclude Include="AXP\cplusplus\ThirdParty\IConv\Libiconv\IConv.h" />
+    <ClInclude Include="AXP\cplusplus\ThirdParty\IConv\Libiconv\iconv_open1.h" />
+    <ClInclude Include="AXP\cplusplus\ThirdParty\IConv\Libiconv\iconv_open2.h" />
+    <ClInclude Include="AXP\cplusplus\ThirdParty\IConv\Libiconv\iso2022_cn.h" />
+    <ClInclude Include="AXP\cplusplus\ThirdParty\IConv\Libiconv\iso2022_cnext.h" />
+    <ClInclude Include="AXP\cplusplus\ThirdParty\IConv\Libiconv\iso2022_jp.h" />
+    <ClInclude Include="AXP\cplusplus\ThirdParty\IConv\Libiconv\iso2022_jp1.h" />
+    <ClInclude Include="AXP\cplusplus\ThirdParty\IConv\Libiconv\iso2022_jp2.h" />
+    <ClInclude Include="AXP\cplusplus\ThirdParty\IConv\Libiconv\iso2022_jp3.h" />
+    <ClInclude Include="AXP\cplusplus\ThirdParty\IConv\Libiconv\iso2022_kr.h" />
+    <ClInclude Include="AXP\cplusplus\ThirdParty\IConv\Libiconv\iso646_cn.h" />
+    <ClInclude Include="AXP\cplusplus\ThirdParty\IConv\Libiconv\iso646_jp.h" />
+    <ClInclude Include="AXP\cplusplus\ThirdParty\IConv\Libiconv\iso8859_1.h" />
+    <ClInclude Include="AXP\cplusplus\ThirdParty\IConv\Libiconv\iso8859_10.h" />
+    <ClInclude Include="AXP\cplusplus\ThirdParty\IConv\Libiconv\iso8859_11.h" />
+    <ClInclude Include="AXP\cplusplus\ThirdParty\IConv\Libiconv\iso8859_13.h" />
+    <ClInclude Include="AXP\cplusplus\ThirdParty\IConv\Libiconv\iso8859_14.h" />
+    <ClInclude Include="AXP\cplusplus\ThirdParty\IConv\Libiconv\iso8859_15.h" />
+    <ClInclude Include="AXP\cplusplus\ThirdParty\IConv\Libiconv\iso8859_16.h" />
+    <ClInclude Include="AXP\cplusplus\ThirdParty\IConv\Libiconv\iso8859_2.h" />
+    <ClInclude Include="AXP\cplusplus\ThirdParty\IConv\Libiconv\iso8859_3.h" />
+    <ClInclude Include="AXP\cplusplus\ThirdParty\IConv\Libiconv\iso8859_4.h" />
+    <ClInclude Include="AXP\cplusplus\ThirdParty\IConv\Libiconv\iso8859_5.h" />
+    <ClInclude Include="AXP\cplusplus\ThirdParty\IConv\Libiconv\iso8859_6.h" />
+    <ClInclude Include="AXP\cplusplus\ThirdParty\IConv\Libiconv\iso8859_7.h" />
+    <ClInclude Include="AXP\cplusplus\ThirdParty\IConv\Libiconv\iso8859_8.h" />
+    <ClInclude Include="AXP\cplusplus\ThirdParty\IConv\Libiconv\iso8859_9.h" />
+    <ClInclude Include="AXP\cplusplus\ThirdParty\IConv\Libiconv\isoir165.h" />
+    <ClInclude Include="AXP\cplusplus\ThirdParty\IConv\Libiconv\isoir165ext.h" />
+    <ClInclude Include="AXP\cplusplus\ThirdParty\IConv\Libiconv\java.h" />
+    <ClInclude Include="AXP\cplusplus\ThirdParty\IConv\Libiconv\jisx0201.h" />
+    <ClInclude Include="AXP\cplusplus\ThirdParty\IConv\Libiconv\jisx0208.h" />
+    <ClInclude Include="AXP\cplusplus\ThirdParty\IConv\Libiconv\jisx0212.h" />
+    <ClInclude Include="AXP\cplusplus\ThirdParty\IConv\Libiconv\jisx0213.h" />
+    <ClInclude Include="AXP\cplusplus\ThirdParty\IConv\Libiconv\johab.h" />
+    <ClInclude Include="AXP\cplusplus\ThirdParty\IConv\Libiconv\johab_hangul.h" />
+    <ClInclude Include="AXP\cplusplus\ThirdParty\IConv\Libiconv\koi8_r.h" />
+    <ClInclude Include="AXP\cplusplus\ThirdParty\IConv\Libiconv\koi8_ru.h" />
+    <ClInclude Include="AXP\cplusplus\ThirdParty\IConv\Libiconv\koi8_t.h" />
+    <ClInclude Include="AXP\cplusplus\ThirdParty\IConv\Libiconv\koi8_u.h" />
+    <ClInclude Include="AXP\cplusplus\ThirdParty\IConv\Libiconv\ksc5601.h" />
+    <ClInclude Include="AXP\cplusplus\ThirdParty\IConv\Libiconv\localcharset.h" />
+    <ClInclude Include="AXP\cplusplus\ThirdParty\IConv\Libiconv\loops.h" />
+    <ClInclude Include="AXP\cplusplus\ThirdParty\IConv\Libiconv\loop_unicode.h" />
+    <ClInclude Include="AXP\cplusplus\ThirdParty\IConv\Libiconv\loop_wchar.h" />
+    <ClInclude Include="AXP\cplusplus\ThirdParty\IConv\Libiconv\mac_arabic.h" />
+    <ClInclude Include="AXP\cplusplus\ThirdParty\IConv\Libiconv\mac_centraleurope.h" />
+    <ClInclude Include="AXP\cplusplus\ThirdParty\IConv\Libiconv\mac_croatian.h" />
+    <ClInclude Include="AXP\cplusplus\ThirdParty\IConv\Libiconv\mac_cyrillic.h" />
+    <ClInclude Include="AXP\cplusplus\ThirdParty\IConv\Libiconv\mac_greek.h" />
+    <ClInclude Include="AXP\cplusplus\ThirdParty\IConv\Libiconv\mac_hebrew.h" />
+    <ClInclude Include="AXP\cplusplus\ThirdParty\IConv\Libiconv\mac_iceland.h" />
+    <ClInclude Include="AXP\cplusplus\ThirdParty\IConv\Libiconv\mac_roman.h" />
+    <ClInclude Include="AXP\cplusplus\ThirdParty\IConv\Libiconv\mac_romania.h" />
+    <ClInclude Include="AXP\cplusplus\ThirdParty\IConv\Libiconv\mac_thai.h" />
+    <ClInclude Include="AXP\cplusplus\ThirdParty\IConv\Libiconv\mac_turkish.h" />
+    <ClInclude Include="AXP\cplusplus\ThirdParty\IConv\Libiconv\mac_ukraine.h" />
+    <ClInclude Include="AXP\cplusplus\ThirdParty\IConv\Libiconv\mulelao.h" />
+    <ClInclude Include="AXP\cplusplus\ThirdParty\IConv\Libiconv\nextstep.h" />
+    <ClInclude Include="AXP\cplusplus\ThirdParty\IConv\Libiconv\pt154.h" />
+    <ClInclude Include="AXP\cplusplus\ThirdParty\IConv\Libiconv\relocatable.h" />
+    <ClInclude Include="AXP\cplusplus\ThirdParty\IConv\Libiconv\riscos1.h" />
+    <ClInclude Include="AXP\cplusplus\ThirdParty\IConv\Libiconv\rk1048.h" />
+    <ClInclude Include="AXP\cplusplus\ThirdParty\IConv\Libiconv\shift_jisx0213.h" />
+    <ClInclude Include="AXP\cplusplus\ThirdParty\IConv\Libiconv\sjis.h" />
+    <ClInclude Include="AXP\cplusplus\ThirdParty\IConv\Libiconv\tcvn.h" />
+    <ClInclude Include="AXP\cplusplus\ThirdParty\IConv\Libiconv\tds565.h" />
+    <ClInclude Include="AXP\cplusplus\ThirdParty\IConv\Libiconv\tis620.h" />
+    <ClInclude Include="AXP\cplusplus\ThirdParty\IConv\Libiconv\translit.h" />
+    <ClInclude Include="AXP\cplusplus\ThirdParty\IConv\Libiconv\ucs2.h" />
+    <ClInclude Include="AXP\cplusplus\ThirdParty\IConv\Libiconv\ucs2be.h" />
+    <ClInclude Include="AXP\cplusplus\ThirdParty\IConv\Libiconv\ucs2internal.h" />
+    <ClInclude Include="AXP\cplusplus\ThirdParty\IConv\Libiconv\ucs2le.h" />
+    <ClInclude Include="AXP\cplusplus\ThirdParty\IConv\Libiconv\ucs2swapped.h" />
+    <ClInclude Include="AXP\cplusplus\ThirdParty\IConv\Libiconv\ucs4.h" />
+    <ClInclude Include="AXP\cplusplus\ThirdParty\IConv\Libiconv\ucs4be.h" />
+    <ClInclude Include="AXP\cplusplus\ThirdParty\IConv\Libiconv\ucs4internal.h" />
+    <ClInclude Include="AXP\cplusplus\ThirdParty\IConv\Libiconv\ucs4le.h" />
+    <ClInclude Include="AXP\cplusplus\ThirdParty\IConv\Libiconv\ucs4swapped.h" />
+    <ClInclude Include="AXP\cplusplus\ThirdParty\IConv\Libiconv\uhc_1.h" />
+    <ClInclude Include="AXP\cplusplus\ThirdParty\IConv\Libiconv\uhc_2.h" />
+    <ClInclude Include="AXP\cplusplus\ThirdParty\IConv\Libiconv\utf16.h" />
+    <ClInclude Include="AXP\cplusplus\ThirdParty\IConv\Libiconv\utf16be.h" />
+    <ClInclude Include="AXP\cplusplus\ThirdParty\IConv\Libiconv\utf16le.h" />
+    <ClInclude Include="AXP\cplusplus\ThirdParty\IConv\Libiconv\utf32.h" />
+    <ClInclude Include="AXP\cplusplus\ThirdParty\IConv\Libiconv\utf32be.h" />
+    <ClInclude Include="AXP\cplusplus\ThirdParty\IConv\Libiconv\utf32le.h" />
+    <ClInclude Include="AXP\cplusplus\ThirdParty\IConv\Libiconv\utf7.h" />
+    <ClInclude Include="AXP\cplusplus\ThirdParty\IConv\Libiconv\utf8.h" />
+    <ClInclude Include="AXP\cplusplus\ThirdParty\IConv\Libiconv\vietcomb.h" />
+    <ClInclude Include="AXP\cplusplus\ThirdParty\IConv\Libiconv\viscii.h" />
+    <ClInclude Include="AXP\cplusplus\xplatform\include\aresult.h" />
+    <ClInclude Include="AXP\cplusplus\xplatform\include\astring.h" />
+    <ClInclude Include="AXP\cplusplus\xplatform\include\atime.h" />
+    <ClInclude Include="AXP\cplusplus\xplatform\include\atom.h" />
+    <ClInclude Include="AXP\cplusplus\xplatform\include\bitBuffer.h" />
+    <ClInclude Include="AXP\cplusplus\xplatform\include\byteOrder.h" />
+    <ClInclude Include="AXP\cplusplus\xplatform\include\coretype.h" />
+    <ClInclude Include="AXP\cplusplus\xplatform\include\define.h" />
+    <ClInclude Include="AXP\cplusplus\xplatform\include\event.h" />
+    <ClInclude Include="AXP\cplusplus\xplatform\include\ipc\IPCEvent.h" />
+    <ClInclude Include="AXP\cplusplus\xplatform\include\ipc\IPCFIFOBuffer.h" />
+    <ClInclude Include="AXP\cplusplus\xplatform\include\ipc\IPCMutex.h" />
+    <ClInclude Include="AXP\cplusplus\xplatform\include\ipc\IPCStreamBuffer.h" />
+    <ClInclude Include="AXP\cplusplus\xplatform\include\keyValueList.h" />
+    <ClInclude Include="AXP\cplusplus\xplatform\include\limits.h" />
+    <ClInclude Include="AXP\cplusplus\xplatform\include\linkedlist.h" />
+    <ClInclude Include="AXP\cplusplus\xplatform\include\list.h" />
+    <ClInclude Include="AXP\cplusplus\xplatform\include\memoryStream.h" />
+    <ClInclude Include="AXP\cplusplus\xplatform\include\mutex.h" />
+    <ClInclude Include="AXP\cplusplus\xplatform\include\nullable.h" />
+    <ClInclude Include="AXP\cplusplus\xplatform\include\object.h" />
+    <ClInclude Include="AXP\cplusplus\xplatform\include\Parcel.h" />
+    <ClInclude Include="AXP\cplusplus\xplatform\include\parcelable.h" />
+    <ClInclude Include="AXP\cplusplus\xplatform\include\queue.h" />
+    <ClInclude Include="AXP\cplusplus\xplatform\include\refBase.h" />
+    <ClInclude Include="AXP\cplusplus\xplatform\include\stl\equalToFunction.h" />
+    <ClInclude Include="AXP\cplusplus\xplatform\include\stl\hashFunction.h" />
+    <ClInclude Include="AXP\cplusplus\xplatform\include\stl\hashTable.h" />
+    <ClInclude Include="AXP\cplusplus\xplatform\include\stl\pair.h" />
+    <ClInclude Include="AXP\cplusplus\xplatform\include\stl\tree.h" />
+    <ClInclude Include="AXP\cplusplus\xplatform\include\streambuf.h" />
+    <ClInclude Include="AXP\cplusplus\xplatform\include\stringBuffer.h" />
+    <ClInclude Include="AXP\cplusplus\xplatform\include\thread.h" />
+    <ClInclude Include="AXP\cplusplus\xplatform\include\tree.h" />
+    <ClInclude Include="AXP\cplusplus\xplatform\include\type.h" />
+    <ClInclude Include="AXP\cplusplus\xplatform\include\uri.h" />
+    <ClInclude Include="AXP\cplusplus\xplatform\include\vbuf.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="AXP\cplusplus\libc\src\Common\BaseWorker.cpp" />
+    <ClCompile Include="AXP\cplusplus\libc\src\Common\ClassLoader.cpp" />
+    <ClCompile Include="AXP\cplusplus\libc\src\Common\Tracker.cpp" />
+    <ClCompile Include="AXP\cplusplus\libc\src\MessageQueue\Bundle.cpp" />
+    <ClCompile Include="AXP\cplusplus\libc\src\MessageQueue\Handler.cpp" />
+    <ClCompile Include="AXP\cplusplus\libc\src\MessageQueue\Looper.cpp" />
+    <ClCompile Include="AXP\cplusplus\libc\src\MessageQueue\Message.cpp" />
+    <ClCompile Include="AXP\cplusplus\libc\src\MessageQueue\MessageQueue.cpp" />
+    <ClCompile Include="AXP\cplusplus\libc\src\Network\HttpServer.cpp" />
+    <ClCompile Include="AXP\cplusplus\ThirdParty\IConv\Libiconv\iconv.c" />
+    <ClCompile Include="AXP\cplusplus\ThirdParty\IConv\Libiconv\localcharset.c" />
+    <ClCompile Include="AXP\cplusplus\ThirdParty\IConv\Libiconv\relocatable.c" />
+    <ClCompile Include="AXP\cplusplus\xplatform\src\astring.cpp" />
+    <ClCompile Include="AXP\cplusplus\xplatform\src\atime.cpp" />
+    <ClCompile Include="AXP\cplusplus\xplatform\src\atom.cpp" />
+    <ClCompile Include="AXP\cplusplus\xplatform\src\event.cpp" />
+    <ClCompile Include="AXP\cplusplus\xplatform\src\mutex.cpp" />
+    <ClCompile Include="AXP\cplusplus\xplatform\src\Parcel.cpp" />
+    <ClCompile Include="AXP\cplusplus\xplatform\src\thread.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="AXP\cplusplus\ThirdParty\IConv\Libiconv\encodings.def" />
+    <None Include="AXP\cplusplus\ThirdParty\IConv\Libiconv\encodings_aix.def" />
+    <None Include="AXP\cplusplus\ThirdParty\IConv\Libiconv\encodings_dos.def" />
+    <None Include="AXP\cplusplus\ThirdParty\IConv\Libiconv\encodings_extra.def" />
+    <None Include="AXP\cplusplus\ThirdParty\IConv\Libiconv\encodings_local.def" />
+    <None Include="AXP\cplusplus\ThirdParty\IConv\Libiconv\encodings_osf1.def" />
+    <None Include="AXP\cplusplus\ThirdParty\IConv\Libiconv\translit.def" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>
